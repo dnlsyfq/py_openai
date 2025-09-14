@@ -1,0 +1,8 @@
+using OpenAI.Chat;
+
+ChatClient client = new(
+  model: "gpt-40-mini",
+  apiKey: Environment.GetEnvironmentVariable("OPEN_API_KEY")
+);
+
+ChatCompletion chatCompletion = client.CompleteChat("Say 'this is a test.' ");
